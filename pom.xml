@@ -3,7 +3,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mule.connect</groupId>
-	<artifactId>karthik-maven-project</artifactId> <!-- It is the applicaiton name that goes to cloudhub -->
+	<artifactId>karthik-maven-project-123</artifactId> <!-- It is the applicaiton name that goes to cloudhub -->
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule</packaging>
 	<name>Mule maven-project Application</name>
