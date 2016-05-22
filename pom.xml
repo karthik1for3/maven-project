@@ -3,7 +3,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mule.connect</groupId>
-	<artifactId>maven-project</artifactId>
+	<artifactId>karthik-maven-project</artifactId> <!-- It is the applicaiton name that goes to cloudhub -->
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule</packaging>
 	<name>Mule maven-project Application</name>
@@ -12,6 +12,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+		<uid>karthik_ushkala1for3</uid>
+		<pwd>password goes here</pwd>
 		<mule.version>3.8.0</mule.version>
 		<derby.version>10.12.1.1</derby.version>
 		<activemq.version>5.13.3</activemq.version>
@@ -61,6 +63,31 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			
+			<!-- Deploying the package to Cloudhub -->
+			<plugin>
+			    <groupId>org.mule.tools.maven</groupId>
+			    <artifactId>mule-maven-plugin</artifactId>
+			    <version>2.0</version>
+			    <configuration>
+			        <deploymentType>cloudhub</deploymentType>
+			        <muleVersion>${mule.version}</muleVersion>
+			        <username>${uid}</username>
+			        <password>${pwd}</password>
+					<workerType>Micro</workerType>
+			        <redeploy>true</redeploy>
+			        <environment>Production</environment>
+			    </configuration>
+			    <executions>
+			        <execution>
+			            <id>deploy</id>
+			            <phase>deploy</phase>
+			            <goals>
+			                <goal>deploy</goal>
+			            </goals>
+			        </execution>
+			    </executions>
 			</plugin>
 		</plugins>
 	</build>
