@@ -19,7 +19,7 @@ http://www.mulesoft.org/schema/mule/jms http://www.mulesoft.org/schema/mule/jms/
 http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
 http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
 
-	<http:listener-config name="HTTP_Listener_8081" host="0.0.0.0" port="8082" doc:name="HTTP Listener Configuration" />
+	<http:listener-config name="HTTP_Listener_8081" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration" />
 
 	<spring:beans>
 		<spring:bean id="Bean" name="Bean" class="com.mule.connect.Database" />
